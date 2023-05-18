@@ -1,17 +1,21 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import millify from 'millify';
+// eslint-disable-next-line no-unused-vars
 import { Collapse, Row, Col, Typography, Avatar } from 'antd';
+// eslint-disable-next-line no-unused-vars
 import HTMLReactParser from 'html-react-parser';
 
 import { useGetExchangesQuery } from '../services/cryptoApi';
 import Loader from './Loader';
 
+// eslint-disable-next-line no-unused-vars
 const { Text } = Typography;
+// eslint-disable-next-line no-unused-vars
 const { Panel } = Collapse;
 
 const Exchanges = () => {
-  const { data, isFetching } = useGetExchangesQuery();
-  const exchangesList = data?.data?.exchanges;
+  const { isFetching } = useGetExchangesQuery();
  // Note: To access this endpoint you need premium plan
   if (isFetching) return <Loader />;
 
